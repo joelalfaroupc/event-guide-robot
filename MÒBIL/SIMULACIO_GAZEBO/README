@@ -1,0 +1,157 @@
+# Event Guide Robot
+
+Projecte per a un robot guia de fira/esdeveniment amb TurtleBot3 Waffle Pi. El sistema rep una ordre textual, resol l'estand o la zona dins d'un mapa semàntic, navega fins a aquesta zona amb `move_base` i, quan hi arriba, fa una cerca visual local del marcador ArUco de l'estand objectiu.
+
+## Què fa el sistema
+
+El flux principal és:
+
+```text
+/guide/command
+  -> semantic planner
+  -> /guide/plan
+  -> navigation manager
+  -> /move_base
+  -> local search manager
+  -> /vision/detections
+  -> FOUND_TARGET o SEARCH_FAILED a /guide/state
+```
+
+## Instal·lació a Ubuntu amb ROS Noetic
+
+Si el projecte és a Windows i es vol copiar a Ubuntu/WSL o a una màquina amb Noetic:
+
+```bash
+mkdir -p ~/catkin_ws/src
+cp -r /ruta_a_la_carpeta/event_guide_robot ~/catkin_ws/src/
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+export TURTLEBOT3_MODEL=waffle_pi
+```
+
+Substitueix `/ruta_a_la_carpeta/event_guide_robot` per la ruta real on tinguis descarregat aquest repositori.
+
+Si ja és dins de `~/catkin_ws/src/event_guide_robot`, n'hi ha prou amb:
+
+```bash
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+export TURTLEBOT3_MODEL=waffle_pi
+```
+
+## Llançar la simulació
+
+El launch principal aixeca Gazebo, el TurtleBot3, la navegació, el mapa, el món de la fira i els quatre nodes del robot guia:
+
+```bash
+roslaunch event_guide_robot simulation.launch
+```
+
+## Enviar ordres al robot (terminal nova)
+
+Exemple per anar a l'estand de Nokia:
+
+```bash
+rostopic pub -1 /guide/command std_msgs/String "data: 'nokia'"
+```
+
+També es pot escriure una ordre més natural si conté un àlies conegut. Els àlies del mapa semàntic estan definits en castellà, per això aquests exemples mantenen `stand` i `zona izquierda`:
+
+```bash
+rostopic pub -1 /guide/command std_msgs/String "data: 'llevame al stand de nokia'"
+rostopic pub -1 /guide/command std_msgs/String "data: 'quiero ir a qualcomm'"
+rostopic pub -1 /guide/command std_msgs/String "data: 'vamos a la zona izquierda'"
+```
+
+## Stands disponibles
+
+| Stand | Àlies recomanat | Zona | ArUco |
+| --- | --- | --- | --- |
+| Qualcomm AI Hub | `qualcomm` | Zona arriba | 11 |
+| Samsung Galaxy Experience | `samsung` | Zona arriba | 12 |
+| Telefonica Open Gateway | `telefonica` | Zona izquierda | 21 |
+| Nokia Networks Lab | `nokia` | Zona izquierda | 22 |
+| Ericsson 5G Arena | `ericsson` | Zona abajo | 31 |
+| GSMA Innovation City | `gsma` | Zona abajo | 32 |
+| Meta XR Showcase | `meta` | Zona derecha | 41 |
+| NVIDIA Edge AI | `nvidia` | Zona derecha | 42 |
+
+També es poden demanar zones directament:
+
+```bash
+rostopic pub -1 /guide/command std_msgs/String "data: 'zona arriba'"
+rostopic pub -1 /guide/command std_msgs/String "data: 'zona izquierda'"
+rostopic pub -1 /guide/command std_msgs/String "data: 'zona abajo'"
+rostopic pub -1 /guide/command std_msgs/String "data: 'zona derecha'"
+```
+
+## Topics importants
+
+Veure l'estat del sistema guia:
+
+```bash
+rostopic echo /guide/state
+```
+
+Estats esperats:
+
+- `PARSE_TARGET`
+- `TARGET_RESOLVED`
+- `NAVIGATE_TO_ZONE`
+- `NAVIGATION_SUCCEEDED`
+- `LOCAL_VISUAL_SEARCH`
+- `APPROACH_TARGET`
+- `FOUND_TARGET`
+- `SEARCH_FAILED`
+
+Veure deteccions de visió:
+
+```bash
+rostopic echo /vision/detections
+```
+
+Les deteccions es publiquen com a JSON amb camps com `marker_id`, `label_id`, `stable`, `distance_m` i `center_offset_x`.
+
+Veure missatges de resultat:
+
+```bash
+rostopic echo /guide/result
+```
+
+Veure la càmera del robot:
+
+```bash
+rosrun rqt_image_view rqt_image_view
+```
+
+## Estructura del repositori
+
+- `config/`: fitxers de configuració del sistema, com el mapa semàntic i els paràmetres de cerca local.
+- `launch/`: fitxers `.launch` per iniciar la simulació, la navegació i els nodes del robot guia.
+- `maps/`: mapes 2D utilitzats per `map_server`, AMCL i `move_base`.
+- `models/`: models Gazebo dels marcadors ArUco de cada stand.
+- `scripts/`: nodes ROS en Python del planner, navegació, cerca local i visió.
+- `test/`: tests unitaris dels components principals i dels fitxers launch.
+- `tools/`: eines auxiliars per generar recursos de simulació.
+- `worlds/`: mons Gazebo, incloent l'escenari de la fira.
+
+Fitxers destacats:
+
+- `config/semantic_map.yaml`: zones, stands, àlies, objectius de navegació i marcadors ArUco.
+- `config/search_params.yaml`: paràmetres de gir, timeout, aproximació visual i velocitats.
+- `worlds/event_fair.world`: món Gazebo de la fira amb parets i marcadors.
+- `maps/event_fair_map.yaml`: mapa utilitzat per la simulació completa.
+
+## Simulació i robot real
+
+Aquest lliurament està preparat per funcionar en simulació amb Gazebo. La part de robot físic s'ha d'afegir en aquesta secció quan estigui validada:
+
+- Hardware utilitzat:
+- Topic real de càmera:
+- Calibració de càmera:
+- Mida real dels marcadors ArUco:
+- Mètode de localització inicial:
+- Launch definitiu per al robot real:
+- Passos de seguretat abans de moure el robot:

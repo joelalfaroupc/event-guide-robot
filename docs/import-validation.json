@@ -1,0 +1,25 @@
+{
+  "exact_source_files": 108,
+  "python": 23,
+  "urscript_exclusions": [
+    "MANIPULADORS/RA_PF1/pipeline/pinza10UR3.py",
+    "MANIPULADORS/RA_PF1/pipeline/pinza40UR3.py"
+  ],
+  "xml": 32,
+  "yaml": 7,
+  "map_images": 3,
+  "errors": [
+    {
+      "file": "MANIPULADORS/RA_PF1/battery_replacer/connect_rrt.xml",
+      "error": "no element found: line 46, column 0"
+    }
+  ],
+  "notes": [],
+  "tests": {
+    "total": 34,
+    "passed": 33,
+    "failed": 1,
+    "failure": "test_resolves_user_request_to_stand_and_zone expects nav_goal.x = -0.529138445854187; delivered Gazebo semantic map contains -0.25. Source files unchanged."
+  },
+  "runtime": "No ROS 1/ROS 2, Gazebo, Kautham, camera or physical robot execution performed in this environment."
+}

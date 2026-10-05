@@ -1,0 +1,164 @@
+# Semantic map for the Event Guide Robot demo.
+#
+# Coordinate source:
+# - Positions match worlds/event_fair.world and maps/event_fair_map.yaml.
+# - The simulated fair is an asymmetric 3x3 building: all nine logical cells
+#   are connected, but two pairs are merged into larger halls and the
+#   top-right room has a single entrance.
+# - Final orientation is intentionally relaxed in the navigation launches via
+#   move_base yaw_goal_tolerance. The robot should reach the zone, then rotate
+#   locally until the requested ArUco marker is visible.
+# - labels use ArUco/AprilTag-style numeric marker IDs as the primary visual
+#   signal. Print one marker per stand and place it next to the human-readable
+#   stand name. Colors can be added physically as a secondary debugging cue, but
+#   they are not the semantic identifier.
+
+metadata:
+  frame_id: map
+  map_file: ../maps/event_fair_map.yaml
+  position_source: generated_event_fair_simulation
+  yaw_source: relaxed_by_move_base_yaw_goal_tolerance
+  centroid:
+    x: 0.0
+    y: 0.0
+
+zones:
+  zona_arriba:
+    name: "Zona arriba"
+    aliases:
+      - "arriba"
+      - "zona arriba"
+      - "punto arriba"
+    nav_goal:
+      x: -0.25
+      y: 3.55
+      yaw: 1.57079632679
+    search_waypoints:
+      - x: -1.25
+        y: 4.55
+        yaw: 1.57079632679
+      - x: -5.05
+        y: 3.55
+        yaw: 3.14159265359
+    labels:
+      qualcomm_ai_hub:
+        display_name: "Qualcomm AI Hub"
+        aliases:
+          - "qualcomm"
+          - "qualcomm ai"
+          - "qualcomm ai hub"
+          - "stand qualcomm"
+        marker_id: 11
+      samsung_galaxy_experience:
+        display_name: "Samsung Galaxy Experience"
+        aliases:
+          - "samsung"
+          - "galaxy"
+          - "samsung galaxy"
+          - "stand samsung"
+        marker_id: 12
+
+  zona_izquierda:
+    name: "Zona izquierda"
+    aliases:
+      - "izquierda"
+      - "zona izquierda"
+      - "punto izquierda"
+    nav_goal:
+      x: -4.55
+      y: 0.10
+      yaw: 3.14159265359
+    search_waypoints:
+      - x: -5.05
+        y: -0.60
+        yaw: 3.14159265359
+      - x: -3.35
+        y: 0.95
+        yaw: 1.57079632679
+    labels:
+      telefonica_open_gateway:
+        display_name: "Telefonica Open Gateway"
+        aliases:
+          - "telefonica"
+          - "open gateway"
+          - "telefonica open gateway"
+          - "stand telefonica"
+        marker_id: 21
+      nokia_networks_lab:
+        display_name: "Nokia Networks Lab"
+        aliases:
+          - "nokia"
+          - "nokia networks"
+          - "networks lab"
+          - "stand nokia"
+        marker_id: 22
+
+  zona_abajo:
+    name: "Zona abajo"
+    aliases:
+      - "abajo"
+      - "zona abajo"
+      - "punto abajo"
+    nav_goal:
+      x: 1.70
+      y: -4.05
+      yaw: -1.57079632679
+    search_waypoints:
+      - x: 0.05
+        y: -4.55
+        yaw: -1.57079632679
+      - x: 5.05
+        y: -3.55
+        yaw: 0.0
+    labels:
+      ericsson_5g_arena:
+        display_name: "Ericsson 5G Arena"
+        aliases:
+          - "ericsson"
+          - "5g arena"
+          - "ericsson 5g"
+          - "stand ericsson"
+        marker_id: 31
+      gsma_innovation_city:
+        display_name: "GSMA Innovation City"
+        aliases:
+          - "gsma"
+          - "innovation city"
+          - "gsma innovation"
+          - "stand gsma"
+        marker_id: 32
+
+  zona_derecha:
+    name: "Zona derecha"
+    aliases:
+      - "derecha"
+      - "zona derecha"
+      - "punto derecha"
+    nav_goal:
+      x: 4.40
+      y: 3.65
+      yaw: 0.0
+    search_waypoints:
+      - x: 5.05
+        y: 3.00
+        yaw: 0.0
+      - x: 4.15
+        y: 4.55
+        yaw: 1.57079632679
+    labels:
+      meta_xr_showcase:
+        display_name: "Meta XR Showcase"
+        aliases:
+          - "meta"
+          - "meta xr"
+          - "xr showcase"
+          - "stand meta"
+        marker_id: 41
+      nvidia_edge_ai:
+        display_name: "NVIDIA Edge AI"
+        aliases:
+          - "nvidia"
+          - "edge ai"
+          - "nvidia edge"
+          - "stand nvidia"
+        marker_id: 42

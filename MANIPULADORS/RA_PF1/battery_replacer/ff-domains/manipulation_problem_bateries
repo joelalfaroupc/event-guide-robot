@@ -1,0 +1,36 @@
+(define (problem manip_problem_bateries)
+
+(:domain batteryreplacer)
+
+(:objects
+    buffer pos1 pos2 graveyard unknown - location
+    bat1 bat2 bat3 bat4 - obstacle
+    ur3a - robot
+)
+
+(:init
+    (in bat1 pos1)
+    (consumed bat1)
+    (not (clear pos1))
+    (in bat2 pos2)
+    (not (clear pos2))
+    (in bat3 buffer)
+    (in bat4 buffer)
+    (handEmpty ur3a)
+    (is-graveyard graveyard)
+)
+
+(:goal
+    (and 
+        ;; 1. All standard positions are occupied (not clear)
+        (not (clear pos1))
+        (not (clear pos2))
+
+        ;; 2. For every obstacle, if it is consumed, it must be in the graveyard
+        (forall (?obs - obstacle)
+            (imply (consumed ?obs) (in ?obs graveyard))
+        )
+    )
+)
+
+)

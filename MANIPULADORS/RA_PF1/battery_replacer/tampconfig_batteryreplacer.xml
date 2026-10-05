@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Config>
+    <Problemfiles>
+        <kautham name="OMPL_batteryreplacer.xml" />
+        <pddldomain name="ff-domains/batteryreplacerdomain.pddl" />
+        <pddlproblem name="ff-domains/manipulation_problem_bateries" />
+        <graspit name="" /> <!--leave
+        it empty if no graspit is to be used -->
+    </Problemfiles>
+    <States>
+        <!-- You can set a different instance of the problem by modifying the intial object poses-->
+        <!-- The GraspControls will be to be changed accordingly the new intial object poses-->
+        <!-- (be careful: if the objects change their initial room then also the pddl problem file
+        has to be set accordingly) -->
+        <Initial>
+            <Object name="BAT1" kthname="bat1"> 0.125 0.175 0.105 0 0 0 1</Object> 
+            <Object name="BAT2" kthname="bat2"> 0.125 -0.265 0.105 0 0 0 1</Object>
+            <Object name="BAT3" kthname="bat3"> 0.125 0.265 0.105 0 0 0 1</Object> 
+            <Object name="BAT4" kthname="bat4"> 0.125 -0.265 -0.105 0 0 0 1</Object>  <!--
+            orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
+            <Robot name="ur3_right" controlfile="controls/right_ur3_with_gripper.cntr"> 0.500 0.375
+                0.500 0.375 0.500 0.500 0.813 </Robot>
+        </Initial>
+    </States>
+    <Actions>
+        <!-- PICKING FOR PAWNB1-->
+        <Pick robot="UR3A" object="bat1" region="POS1">
+            <Rob> ur3_right </Rob>
+            <Obj> bat1 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp"> 0.588639 0.418958 0.691444 0.361361 0.375292 0.962097 0.813 </GraspControls>
+        </Pick>
+        <Pick robot="UR3A" object="bat2" region="POS2">
+            <Rob> ur3_right </Rob>
+            <Obj> bat2 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp"> 0.577597 0.424792 0.672306 0.365069 0.375125 0.951056 0.813</GraspControls>
+        </Pick>
+        <Pick robot="UR3A" object="bat3" region="BUFFER">
+            <Rob> ur3_right </Rob>
+            <Obj> bat3 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp">  0.549042 0.408250 0.693028 0.377972 0.373292 0.550083 0.813 </GraspControls>
+        </Pick>
+        <Pick robot="UR3A" object="bat4" region="BUFFER">
+            <Rob> ur3_right </Rob>
+            <Obj> bat4 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp">  0.549042 0.408250 0.693028 0.377972 0.373292 0.550083 0.813 </GraspControls>
+        </Pick>
+
+        <!-- PLACING -->
+        <Place robot="UR3A" object="BAT1" region="GRAVEYARD">
+            <Rob> ur3_right </Rob>
+            <Obj> bat1 </Obj>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp"> 0.600861 0.411292 0.679222 0.376833 0.379611 0.975167 0.813</GraspControls>
+        </Place>
+        <Place robot="UR3A" object="BAT2" region="GRAVEYARD">
+            <Rob> ur3_right </Rob>
+            <Obj> bat2 </Obj>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp">0.600861 0.411292 0.679222 0.376833 0.379611 0.975167 0.813 </GraspControls>
+        </Place>
+        <Place robot="UR3A" object="BAT3" region="POS1">
+            <Rob> ur3_right </Rob>
+            <Obj> bat3 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp"> 0.588639 0.418958 0.691444 0.361361 0.375292 0.962097 0.813 </GraspControls>
+        </Place>
+        <Place robot="UR3A" object="BAT4" region="POS2">
+            <Rob> ur3_right </Rob>
+            <Obj> bat4 </Obj>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp">0.577597 0.424792 0.672306 0.365069 0.375125 0.951056 0.813 </GraspControls>
+        </Place>
+        <Place robot="UR3A" object="BAT4" region="POS1">
+            <Rob> ur3_right </Rob>
+            <Obj> bat4 </Obj>
+            <Link> robotiq_85_base_link </Link>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp"> 0.588639 0.418958 0.691444 0.361361 0.375292 0.962097 0.813 </GraspControls>
+        </Place>
+        <Place robot="UR3A" object="BAT3" region="POS2">
+            <Rob> ur3_right </Rob>
+            <Obj> bat3 </Obj>
+            <Cont>controls/right_ur3_with_gripper.cntr</Cont>
+            <HomeControls> 0.500 0.375 0.500 0.375 0.500 0.500 0.813 </HomeControls>
+            <GraspControls grasp="topgrasp">0.577597 0.424792 0.672306 0.365069 0.375125 0.951056 0.813 </GraspControls>
+        </Place>
+    </Actions>
+</Config>

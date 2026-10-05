@@ -1,0 +1,385 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <world name='event_fair_world'>
+    <physics type='ode'>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name='event_fair_building'>
+      <static>true</static>
+      <link name='outer_north'>
+        <pose>0 5.4 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>12 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>12 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='outer_south'>
+        <pose>0 -5.4 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>12 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>12 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='outer_west'>
+        <pose>-6 0 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 10.8 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 10.8 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='outer_east'>
+        <pose>6 0 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 10.8 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 10.8 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='left_divider_bottom_lower'>
+        <pose>-2.2 -4.7 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 1.4 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 1.4 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='left_divider_bottom_upper'>
+        <pose>-2.2 -2.4 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='left_divider_middle_lower'>
+        <pose>-2.2 -1.2 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='left_divider_middle_upper'>
+        <pose>-2.2 1.35 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 0.9 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 0.9 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='right_divider_middle_lower'>
+        <pose>2 -1.2 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='right_divider_middle_upper'>
+        <pose>2 1.2 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 1.2 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='right_divider_top_solid'>
+        <pose>2 3.6 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>0.14 3.6 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>0.14 3.6 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='south_divider_left_solid'>
+        <pose>-4.1 -1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>3.8 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>3.8 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='south_divider_center_left'>
+        <pose>-1.5 -1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>1.4 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>1.4 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='south_divider_center_right'>
+        <pose>3.4 -1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>5.2 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>5.2 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='north_divider_left'>
+        <pose>-4.2 1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>3.6 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>3.6 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='north_divider_center_left'>
+        <pose>-0.55 1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>1.7 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>1.7 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='north_divider_center_right'>
+        <pose>1.45 1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>1.1 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>1.1 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='north_divider_right_left'>
+        <pose>2.9 1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>1.8 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>1.8 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <link name='north_divider_right_right'>
+        <pose>5.45 1.8 1.1 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box><size>1.1 0.14 2.2</size></box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box><size>1.1 0.14 2.2</size></box>
+          </geometry>
+          <material>
+            <ambient>0.82 0.82 0.78 1</ambient>
+            <diffuse>0.82 0.82 0.78 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <include>
+      <uri>model://aruco_marker_11</uri>
+      <name>aruco_marker_11</name>
+      <pose>-1.25 5.3 0.17 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_12</uri>
+      <name>aruco_marker_12</name>
+      <pose>-5.9 3.55 0.17 0 0 1.571</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_21</uri>
+      <name>aruco_marker_21</name>
+      <pose>-5.9 -0.6 0.17 0 0 1.571</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_22</uri>
+      <name>aruco_marker_22</name>
+      <pose>-3.35 1.7 0.17 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_31</uri>
+      <name>aruco_marker_31</name>
+      <pose>0.05 -5.3 0.17 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_32</uri>
+      <name>aruco_marker_32</name>
+      <pose>5.9 -3.55 0.17 0 0 1.571</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_41</uri>
+      <name>aruco_marker_41</name>
+      <pose>5.9 3 0.17 0 0 1.571</pose>
+    </include>
+    <include>
+      <uri>model://aruco_marker_42</uri>
+      <name>aruco_marker_42</name>
+      <pose>4.15 5.3 0.17 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

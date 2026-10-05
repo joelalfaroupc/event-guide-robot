@@ -1,94 +1,72 @@
-# Event Guide Robot — Semantic Navigation & Visual Search
+# Event Guide Robot & Battery Manipulation
 
-**A TurtleBot3 guide that maps a requested event stand to a navigation goal and a visual target.**
+**A complete university robotics delivery combining a TurtleBot3 event guide with UR3 battery replacement.**
 
-University mobile-robotics project built with ROS 1. The system combines a semantic map, AMCL localization, `move_base` navigation and ArUco detection in a modular four-node architecture.
+The mobile robot resolves a requested stand into a semantic navigation goal, navigates with `move_base`, and searches for the target ArUco marker. The manipulation project combines PDDL task planning, Kautham/OMPL motion planning and a UR3 execution pipeline for handling battery states.
 
-## What the project delivers
+This repository now contains the supplied **`ENTREGABLE_RA_PF` delivery**: separate real and simulated mobile-robot packages, the manipulation project, the group presentation and **eight original demonstration videos**. All 108 delivery files are preserved byte for byte; nested Git metadata and generated system caches are excluded. The previous edition remains in Git history.
 
-A command such as “quiero ir al stand de Qualcomm” resolves to a stand and a safe navigation pose. After navigation succeeds, the robot searches locally for the corresponding marker and uses its visual position to approach the target.
+## Explore the delivery
 
-The semantic configuration contains **four zones and eight stands**. Aliases link ordinary stand names to explicit map coordinates and marker IDs.
+| Part | Contents | Entry point |
+| --- | --- | --- |
+| Mobile robot · real environment | Four ROS nodes, measured semantic map, navigation/search configuration, launch files and five recordings | [Real-robot guide](MO%CC%80BIL/ENTORN_REAL/README.md) |
+| Mobile robot · Gazebo | ROS package, asymmetric fair world, eight marker models, maps, configuration, tests and a simulation recording | [Gazebo guide](MO%CC%80BIL/SIMULACIO_GAZEBO/README) |
+| Manipulators · UR3 / Kautham | Battery-replacement scenarios, PDDL domain/problem, motion-planning configuration, Python pipeline, URScript gripper programs and two recordings | [Manipulation guide](MANIPULADORS/RA_PF1/README.md) |
+| Group presentation | Twelve slides covering both problems, system flow, topics, planning and demos | [Presentation](Presentacio%CC%81.pdf) |
 
-## Architecture
+## Mobile robot: semantic navigation and visual search
 
 ```text
-User command → Semantic planner → Navigation manager → move_base
-                        ↓                 ↓ success
-                 Target marker → Local search manager → /cmd_vel
-                                        ↑
+Stand command → semantic planner → navigation manager → move_base
+                       ↓                  ↓ navigation succeeds
+                 Target marker → local search manager → /cmd_vel
+                                       ↑
 Camera → ArUco detector → stable target detections
 ```
 
-| Node | Responsibility |
-| --- | --- |
-| Semantic planner | Parse configured aliases and publish the zone, navigation pose and marker target. |
-| Navigation manager | Send goals through actionlib; handle success, failure and timeouts. |
-| Local search manager | Wait for successful navigation, rotate to search, center and approach a stable target, then stop. |
-| Vision detector | Detect ArUco markers with OpenCV and publish target identity, stability and geometric information. |
+Four nodes separate command resolution, navigation, local search and perception. Four zones contain eight stands, including Qualcomm, Nokia and NVIDIA. Stand names are matched against configured aliases; the supplied implementation does not require a language model. The real and simulated semantic maps use different coordinates.
 
-[Source nodes](catkin_ws/src/event_guide_robot/scripts/) are separated from [semantic and search configuration](catkin_ws/src/event_guide_robot/config/). The search logic waits for navigation to finish before commanding movement. Missing vision dependencies produce a warning rather than fabricated detections.
+The system publishes `/guide/command`, `/guide/plan`, `/guide/state`, `/guide/result` and `/vision/detections`. The local search coordinates rotation, target centering and final approach after global navigation succeeds. Camera topics and search parameters are configurable.
 
-## Validation and results
+**Use separate catkin workspaces for the real and Gazebo versions:** both directories define the same `event_guide_robot` package. Copy only the selected package into a ROS 1 workspace's `src/`, build it, source its environment and follow that version's original guide. Gazebo targets ROS Noetic and TurtleBot3 Waffle Pi; the real-robot guide describes its own bringup and networking. Check the selected launch file's camera topic against the actual camera setup.
 
-The original project documentation records:
+## Manipulators: battery replacement
 
-- Navigation on a real TurtleBot3 using the supplied map, AMCL and `move_base`.
-- Successful resolution of semantic aliases and publication of navigation plans.
-- 26 passing unit tests, plus Python, XML and YAML checks, at the documented validation stage.
+The manipulation delivery models two battery positions with `unknown`, `good` or `defective` states. The PDDL domain supplies `pick` and `place` actions; scenarios represent keeping correct batteries, replacing defective ones and filling a missing position. Kautham/OMPL provides motion planning, with RRT, RRT* and RRTConnect configuration files included.
 
-**Camera/ArUco search and final approach still require validation on the physical robot.** The complete command-to-visual-target sequence is implemented, but an end-to-end hardware demonstration is not established by the current record. The navigation between additional local-search waypoints is also pending.
+[RA_PF1](MANIPULADORS/RA_PF1) belongs inside the `src/` folder of the existing ROS 2 Jazzy / Kautham workspace described by the original guide. It requires the external planning packages and Kautham model library. Its entry point is `RA_PF1/pipeline/exe.py <pos1> <pos2>`; `--skip-execution` skips sending the resulting sequence to the robot. The source retains the laboratory network address and workspace assumptions, which need to match a real deployment. The two `pinza*UR3.py` files contain **URScript**, despite their `.py` extension.
 
-These are documented project results, not tests rerun during this presentation update.
+## Demonstration recordings
 
-## Build and run
+The following are original recordings supplied with the delivery, grouped by their source folders. Their presence is separate from a new execution or an end-to-end hardware certification.
 
-Use a configured ROS 1 environment with catkin, TurtleBot3 navigation, AMCL, `move_base`, camera support and OpenCV ArUco functionality. The project targets TurtleBot3 Waffle/Waffle Pi.
+| Recording | Environment | Original size |
+| --- | --- | --- |
+| [RA Manipuladors](MANIPULADORS/VIDEOS_DEMO/ENTORN_REAL/RA%20Manipuladors.mp4) | Manipulators · real | 89.3 MB |
+| [RA Manipuladors Kautham](MANIPULADORS/VIDEOS_DEMO/SIMULACIO_KAUTHAM/RA%20Manipuladors%20Kautham.mp4) | Manipulators · Kautham | 2.2 MB |
+| [Qualcomm_a_nokia](MO%CC%80BIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Qualcomm_a_nokia.mov) | Mobile · real | 57.3 MB |
+| [Stand_Qualcomm](MO%CC%80BIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Stand_Qualcomm.mov) | Mobile · real | 46.2 MB |
+| [Stand_nokia](MO%CC%80BIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Stand_nokia.mov) | Mobile · real | 51.1 MB |
+| [Video_Stand_Nokia_RVIZ](MO%CC%80BIL/ENTORN_REAL/VIDEOS_DEMO/RVIZ/Video_Stand_Nokia_RVIZ.mp4) | Mobile · RViz | 201.0 MB |
+| [Video_Stand_Qualcomm_RVIZ](MO%CC%80BIL/ENTORN_REAL/VIDEOS_DEMO/RVIZ/Video_Stand_Qualcomm_RVIZ.mp4) | Mobile · RViz | 169.2 MB |
+| [simulacio_mobil](MO%CC%80BIL/SIMULACIO_GAZEBO/VIDEOS_DEMO/simulacio_mobil.mp4) | Mobile · Gazebo | 80.2 MB |
 
-From the repository root, with the ROS environment sourced:
+All eight videos use **Git LFS** so the original files remain complete, including the two larger than GitHub's regular-file limit. To retrieve them, install Git LFS before cloning, or run `git lfs pull` in an existing clone. GitHub-generated ZIP downloads may contain LFS pointers instead of videos; use an LFS-enabled clone for the full delivery. SHA-256 hashes and original byte sizes are recorded in the [delivery manifest](docs/delivery-manifest.json).
 
-```bash
-cd catkin_ws
-catkin_make
-source devel/setup.bash
-export TURTLEBOT3_MODEL=waffle_pi
-```
+## Import checks and known limitations
 
-Follow the [real-robot runbook](docs/real-robot-runbook.md) to configure networking, start the robot and camera, and set the initial pose. On physical hardware, use `/use_sim_time=false`.
+The import checks confirmed all 108 source-file hashes, Python syntax for 23 actual Python files, 32 valid XML-family files, seven YAML files and three map-image references. The supplied mobile unit suite produced **33 passed and one failed**:
 
-After bringup, launch the integrated system:
+- `test_resolves_user_request_to_stand_and_zone` expects `nav_goal.x = -0.529138445854187`, while the delivered Gazebo configuration contains `-0.25`.
+- `MANIPULADORS/RA_PF1/battery_replacer/connect_rrt.xml` is incomplete: its root `Problem` element is not closed. This alternative configuration does not pass XML parsing.
 
-```bash
-roslaunch event_guide_robot navigation_with_guide.launch
-```
+Both inconsistencies are retained and documented so this import stays faithful to the supplied delivery. Full ROS builds, Gazebo/Kautham execution, camera processing and physical hardware were **not rerun** in the import environment. The recordings do not establish that every code path or configuration was validated. See the [detailed import checks](docs/import-validation.json).
 
-In another terminal with the workspace sourced:
+To reproduce the supplied unit suite, install `pytest` and `PyYAML`, then run `python3 -m pytest` against the `test/` directory of the Gazebo `event_guide_robot` package linked above.
 
-```bash
-rostopic pub /guide/command std_msgs/String "data: 'quiero ir al stand de Qualcomm'"
-rostopic echo /guide/state
-rostopic echo /guide/result
-```
+## Credits and provenance
 
-The detector expects raw `sensor_msgs/Image` on `/raspicam_node/image`. Marker IDs are defined in the semantic map; the launch defaults to a printed marker size of 0.16 m. Match the configuration to the actual markers before testing visual approach.
+The group presentation credits **Joel Alfaro, Andreu López, Oriol Martí, Daniel Pastor and Elies Aragonès — Grup 3**. These credits describe the collective academic delivery; this portfolio does not assign individual contributions.
 
-## Tests and documentation
-
-From the repository root:
-
-```bash
-python3 -m pytest catkin_ws/src/event_guide_robot/test -q
-python3 -m py_compile catkin_ws/src/event_guide_robot/scripts/*.py
-```
-
-- [Preserved Spanish technical guide](docs/technical-guide-es.md)
-- [Real-robot runbook](docs/real-robot-runbook.md)
-- [Node explanations](docs/nodes-explanation.md)
-- [Semantic labeling guide](docs/semantic-labeling-guide.md)
-- [ROS package](catkin_ws/src/event_guide_robot/)
-
-The Spanish guide retains the detailed implementation notes, ROS topics, state transitions, tuning and next steps.
-
-## Project context
-
-This repository preserves the university team's implementation and commit history from [daniupc/event-guide-robot](https://github.com/daniupc/event-guide-robot). This portfolio edition makes the system and its validation status easier to review.
+The mobile project's existing history comes from [daniupc/event-guide-robot](https://github.com/daniupc/event-guide-robot) and is preserved. The original Catalan/English guides, presentation, source files and media remain in their delivery structure. License declarations within the mobile package manifests are preserved; no additional license is assigned to the complete combined delivery.

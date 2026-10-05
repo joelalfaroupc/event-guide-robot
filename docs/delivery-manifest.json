@@ -1,0 +1,655 @@
+{
+  "source": "ENTREGABLE_RA_PF",
+  "imported_files": 108,
+  "total_bytes": 727909096,
+  "files": [
+    {
+      "path": "MANIPULADORS/RA_PF1/2_def_good.xml",
+      "size": 95541,
+      "sha256": "6cd657dc985680dc973f7cf5618644d9a2b1e53e85aa5b794f0f8a877191b21c"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/2_good_unk.xml",
+      "size": 37970,
+      "sha256": "6c738758787d79e1e60fdc39f2b9c749a010655ee18dd74381216ad85605b06b"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/2_unk_def.xml",
+      "size": 134391,
+      "sha256": "7a497b390e502998c00ad07cb10949b118c9159ba3b518f4d0109887e3aa2149"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/README.md",
+      "size": 881,
+      "sha256": "5629be2830fc1ebe8227792aeb4d18c8e7fabb4ac564492296f3d30297722195"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/OMPL_batteryreplacer.xml",
+      "size": 2482,
+      "sha256": "9ad05f121526b21ef30a02dd35d475beca833e2d6191d1fd40bded6d9eb469e1"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/connect_rrt.xml",
+      "size": 1862,
+      "sha256": "e75660db787dc95934764a3021bad8a560a19660c7319e293f09cc0696187fca"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/controls/left_ur3_with_gripper.cntr",
+      "size": 2259,
+      "sha256": "3472a8dae1b3cbbfa74095822dae7a4c184c6a4075de98618504dc1595b1e814"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/controls/right_ur3_with_gripper.cntr",
+      "size": 2289,
+      "sha256": "ced5d32c168a4cea6729aecb6c2a214ce9ddd3607c6de928e53541ad7b27695a"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/controls/two_ur3_with_gripper.cntr",
+      "size": 4456,
+      "sha256": "81de62a7761faf950e356fdb072b0fbc6d92572f218958f88d718705f151bbe1"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/ff-domains/batteryreplacerdomain.pddl",
+      "size": 1618,
+      "sha256": "af15235e338866174775f6bec1d599d718a555effa0a2f4484aab2913b5c96c1"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/ff-domains/manipulation_problem_bateries",
+      "size": 716,
+      "sha256": "a390a029b959a69da1645105224c2c44950eece354255409ac3cc07fb6027ead"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/kthconfig.xml",
+      "size": 237,
+      "sha256": "3545c782fe8ae1f18e50b3621c05cb6499e38306477d1d54fc6dbfecbbe3c9a9"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/launch/chess_1_simple.launch.py",
+      "size": 1914,
+      "sha256": "4bcbc0f2f52f1e41a434e3ee49ffcb478ffcbedb117bcef399d232d96943ecf3"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/launch/chess_2_simple.launch.py",
+      "size": 1914,
+      "sha256": "bfbeef97a14210ed05d372d63ec8bc4ade0d5c805b0f52903d7b287533d36ac7"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/rrt.xml",
+      "size": 1703,
+      "sha256": "6ea29704877e77d1356474539801ceb8ee0274599cf34c666d883bdf8178e4a1"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/rrt_star.xml",
+      "size": 1669,
+      "sha256": "496a85a15d4a3955cc02b4fb51005b99de8b525e3805a2988d55bb4a8cd93d2d"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/rviz/kautham_chess_1_simple.rviz",
+      "size": 20688,
+      "sha256": "80b4fcf59bac8444fb3efa14bee537b7cf290d46a25caaa48a5b1d9d4b26efac"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/rviz/kautham_chess_2_simple.rviz",
+      "size": 20688,
+      "sha256": "80b4fcf59bac8444fb3efa14bee537b7cf290d46a25caaa48a5b1d9d4b26efac"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/tampconfig_batteryreplacer.xml",
+      "size": 5809,
+      "sha256": "2fda08fd1d0f18b7b2a2bd8e19031057ed2665af00e179b7566b798484b97da3"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/battery_replacer/taskfile_tampconfig_batteryreplacer.xml",
+      "size": 95541,
+      "sha256": "6cd657dc985680dc973f7cf5618644d9a2b1e53e85aa5b794f0f8a877191b21c"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/README.md",
+      "size": 393,
+      "sha256": "68764ffd4490f5bd7aaa947fa5a1b6c3954d5b2ba67a955b226c3ab1f9b6bb19"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/UR3.py",
+      "size": 140676,
+      "sha256": "a53879bc12252218109835727147e090a391b5f95224a4f33f5688d6561e469d"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/battery_check.py",
+      "size": 5222,
+      "sha256": "64d23c56161b3360e639a7e36494789900d5d08468e6cf98ed3f8fdd61a4218a"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/exe.py",
+      "size": 6246,
+      "sha256": "2425e61c23957f567addcc6c8b6071210c896b5b634a785b0807ce0ae659b29b"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/oldexe.py",
+      "size": 5553,
+      "sha256": "f4f726142e76f7f19305a1c80a4c2de1a7f83d900e4642e0df8f36175283497a"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/parse_taskfile.py",
+      "size": 2630,
+      "sha256": "2f6fd0b6a2e0431ce34fbbfa6f427a68b7688db25267986611d0c27e77685dfb"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/paths.py",
+      "size": 8453,
+      "sha256": "7e6a02f18a22b63c6cd4064c35f5a47dec9653863d14aab9f9dc1d7356f750cd"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/pinza10UR3.py",
+      "size": 51649,
+      "sha256": "dab64d844318a3447b5191849aad2f2cde4d6a054da555644278e7e5503c64d1"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/pinza40UR3.py",
+      "size": 51649,
+      "sha256": "451c17e45475bf99f22ca847374482b864a52614757cfcdb9645f9e58f2f132d"
+    },
+    {
+      "path": "MANIPULADORS/RA_PF1/pipeline/update_problem_goal.py",
+      "size": 2629,
+      "sha256": "e3d4c85286bd5aa7366198690d37739abf9cb403a2a4d2eb1f7d712190b7ac91"
+    },
+    {
+      "path": "MANIPULADORS/VIDEOS_DEMO/ENTORN_REAL/RA Manipuladors.mp4",
+      "size": 89287095,
+      "sha256": "fd40b6844538106907ffd92f4d1076dc29723ac50a08258167c45ac3d4d418e4"
+    },
+    {
+      "path": "MANIPULADORS/VIDEOS_DEMO/SIMULACIO_KAUTHAM/RA Manipuladors Kautham.mp4",
+      "size": 2167853,
+      "sha256": "a7d1db11c1538942053784d9ca0e081ee859b38ecd719f8eda82efc389d73513"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/README.md",
+      "size": 5529,
+      "sha256": "2630393bb1c3c078b93dbb036f73681ee403c8cb3994c77fdb3da3d6c7a2f12f"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Qualcomm_a_nokia.mov",
+      "size": 57328445,
+      "sha256": "d1ebc891b04e134b5b3ec1a49219fce35b90c3eda1afe10b9d77cbbc2fdf0501"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Stand_Qualcomm.mov",
+      "size": 46201326,
+      "sha256": "04bf1d643eff85ecbbeaae6cf1b5cab35be6383724632fbedd8837f0710914e4"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/Stand_nokia.mov",
+      "size": 51090520,
+      "sha256": "fd971f2f97cf25ad4d7945ef8c559638514619ed9e25f9fbd8b4057a7d1d0f07"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/RVIZ/Video_Stand_Nokia_RVIZ.mp4",
+      "size": 201030309,
+      "sha256": "fb1bedcbbe29418c8df06682ec5c46799133c8723279a1646d20e861cac82660"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/RVIZ/Video_Stand_Qualcomm_RVIZ.mp4",
+      "size": 169171853,
+      "sha256": "bd7ac016d59ef9763e7c0e1797e031046e334d63f817a0ff4a635d12bf6da48f"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/CMakeLists.txt",
+      "size": 443,
+      "sha256": "d2d22c4f07486f3d2196108a1c10b34447ca15809a8b0f597c1cc0fd329e313c"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/config/search_params.yaml",
+      "size": 570,
+      "sha256": "c7fca035dc8530c3e82e51cb63edf3ee1fb38b40d1dd6979989699797ba82a16"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/config/semantic_map.yaml",
+      "size": 4080,
+      "sha256": "6e4845b2f115180b42cd8a990c48800c84072b832a61a5234eaa3979a02516a1"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/launch/guide_system.launch",
+      "size": 1339,
+      "sha256": "16dae7c80f58f72e2fb06a389d389ea0376c1b2093644fc4464b9ef72c701988"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/launch/navigation_with_guide.launch",
+      "size": 1474,
+      "sha256": "8d0669401cb7ff9444f160019c86dfbabf6454812a65fa71d91b08477cd702e1"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/maps/map.pgm",
+      "size": 147508,
+      "sha256": "62e8c6840831bc660f1b0b7be3334921b8d49f349a40f548d427203b573afa47"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/maps/map.yaml",
+      "size": 131,
+      "sha256": "964566f958dbee800d2e9961cb438476218526f4363b5fe550b9ea962efe584b"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/package.xml",
+      "size": 590,
+      "sha256": "e6258ca858c41564613db5e017cc690bcd16625e8344799541216d8a93c70f8b"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/scripts/local_search_manager_node.py",
+      "size": 14118,
+      "sha256": "01abe70da038c48e17f692e2a85d2d6115f3eac6deeb2ae2b802d6c55218a06a"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/scripts/navigation_manager_node.py",
+      "size": 6467,
+      "sha256": "765d07fb2f3fdf4337de039a1b68279a379012d7803f49a4179ac37846746e3c"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/scripts/semantic_planner_node.py",
+      "size": 4718,
+      "sha256": "1e627e724e5135463c29183d5e59b1f47a7857437dd5e356f9ae236c3c12d5e1"
+    },
+    {
+      "path": "MÒBIL/ENTORN_REAL/event_guide_robot/scripts/vision_detector_node.py",
+      "size": 11103,
+      "sha256": "7155e801148be3745b899dc1e1d1769d5dfe572d931543d8950bd947be45dff8"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/README",
+      "size": 4902,
+      "sha256": "03dd9e347f487a9a33911d0c868da3796d558fe632dae9e726141f1a9077b7b9"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/VIDEOS_DEMO/simulacio_mobil.mp4",
+      "size": 80183321,
+      "sha256": "fc82467483b9bbd3324b1b52afe34c5b43c1719153dcbf0c461890c541d08608"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/CMakeLists.txt",
+      "size": 557,
+      "sha256": "855f1735482b17798c60eeda4423cee73090e4840e3d632cff09c160bb2113f4"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/config/search_params.yaml",
+      "size": 613,
+      "sha256": "01b9862f5180f095326e0657e9acc798944de2488cd44694be4b5aef75ee7ec2"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/config/semantic_map.yaml",
+      "size": 4068,
+      "sha256": "01ac28385389b9757500ede98bf3ac9f157d258d2c4b965cf3732e7678065a63"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/launch/guide_system.launch",
+      "size": 1401,
+      "sha256": "cdcbb12d822646f1887d1630ad99f365045cb2b8e5fb78ae905e1f46c91a3cc8"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/launch/navigation_with_guide.launch",
+      "size": 1474,
+      "sha256": "8d0669401cb7ff9444f160019c86dfbabf6454812a65fa71d91b08477cd702e1"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/launch/simulation.launch",
+      "size": 2205,
+      "sha256": "0b6cb2af8679a3ec93e126e53ac8843cbd6a4de1e821d28eb9df6136f7f72532"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/maps/event_fair_map.pgm",
+      "size": 78415,
+      "sha256": "8e80b5c75db1c6e4f303261d5b78904cfba5cddcd199e6c7a6fe63f6b313086c"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/maps/event_fair_map.yaml",
+      "size": 140,
+      "sha256": "092f17dc16e4c09a389d7cf9d6b8d23980bde0b1d39f787889573ee683035c31"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/maps/map.pgm",
+      "size": 147508,
+      "sha256": "62e8c6840831bc660f1b0b7be3334921b8d49f349a40f548d427203b573afa47"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/maps/map.yaml",
+      "size": 131,
+      "sha256": "964566f958dbee800d2e9961cb438476218526f4363b5fe550b9ea962efe584b"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_11/materials/scripts/aruco_11.material",
+      "size": 201,
+      "sha256": "354212d1c797454e7a57064a994fe24d453e0d918c2257c3b69fa3c2e7f92824"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_11/materials/textures/aruco_11.png",
+      "size": 5071,
+      "sha256": "e990b47f47b9d460107bcba39f4d3240fc1fdc5cfe1a36d5d2ec9d1470cdaf67"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_11/model.config",
+      "size": 285,
+      "sha256": "945ef59a91a35c526c37c4643a7e4319b6da3eed0f865330fcae827915626f39"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_11/model.sdf",
+      "size": 575,
+      "sha256": "dcf2e340da4fe373b89040edc22acf130bd9e861e3156468fcf464763e87ec25"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_12/materials/scripts/aruco_12.material",
+      "size": 201,
+      "sha256": "db5d64ec9479a4c6fab8c1f953ef5fa804dce938a256beb37661c8850b1b48e2"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_12/materials/textures/aruco_12.png",
+      "size": 4746,
+      "sha256": "a08bccb2358550dbef5d6937d9a21f90183d3be6f4b13e9ceb5af9f91a665c55"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_12/model.config",
+      "size": 285,
+      "sha256": "ff74bfdf29597103d7a83a72176d3150a2f413bebbc620cbcf3e47e4808b1038"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_12/model.sdf",
+      "size": 575,
+      "sha256": "e785a0509a53e86436eedf01ce11cf507d558c0b0bdd66b842af5b5c9c8684a0"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_21/materials/scripts/aruco_21.material",
+      "size": 201,
+      "sha256": "d73901f71bfdca740a13573b6a169d503788e495d816101a017d1366af400a45"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_21/materials/textures/aruco_21.png",
+      "size": 5018,
+      "sha256": "7dbaf701172cacc1cdbd71d0b9ba1b38eb0849dce2f848f324b7025d483e810c"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_21/model.config",
+      "size": 285,
+      "sha256": "58fd78c2d906b17b5167a79c26a739e81a4e841000bee1f5adf795185eefd9af"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_21/model.sdf",
+      "size": 575,
+      "sha256": "c26c9a602aed56e56276fbe930186837db17df5ae2010d616423cc20d1410f87"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_22/materials/scripts/aruco_22.material",
+      "size": 201,
+      "sha256": "b1fb96ba4614b077ee72114b87faf214ba5a1ab6d9522b95c8145542ce512fb4"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_22/materials/textures/aruco_22.png",
+      "size": 5456,
+      "sha256": "4320ea64640f88b2854c1e3be77b7994e7a446f435a8402a340f87726afb9c1f"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_22/model.config",
+      "size": 285,
+      "sha256": "5791b0889749f9e2d7067e73caf1ba9c10ddae598cad7647eba25976f6a3d16f"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_22/model.sdf",
+      "size": 575,
+      "sha256": "0bc163cc1cc7b877971a67e10a474d8bc443ee4a80ddfc2dfcccdb568280105e"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_31/materials/scripts/aruco_31.material",
+      "size": 201,
+      "sha256": "8a527ea5372be3cc7d39fcce8463eb5f7f039ae7ab406b7e1c554a1ceedb2aa8"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_31/materials/textures/aruco_31.png",
+      "size": 5533,
+      "sha256": "ea16f7d73c0618fcc7e46a504197d197f31bd220cee270ccf9d0f3d5cddc7c42"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_31/model.config",
+      "size": 285,
+      "sha256": "4561311abc89a39e5316f129a19e650915fd87f8663a3b47e04c054c8916aaf9"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_31/model.sdf",
+      "size": 575,
+      "sha256": "17262648e04a8ee723d186adc767e90889831d86ec31b2f7beeb30487e7410d3"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_32/materials/scripts/aruco_32.material",
+      "size": 201,
+      "sha256": "2fb685db2a70b58601273f67878555d80e43caf3ad1e55d8a9bca6fcf15a58e7"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_32/materials/textures/aruco_32.png",
+      "size": 5271,
+      "sha256": "3aa669e277ab35b0ae568117200493a5da3a5d48de007dfae1bf806fa402236a"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_32/model.config",
+      "size": 285,
+      "sha256": "4f471b73708c0c31b905bdbcb3661d300ea7f596dcf141cd4f6520f5048db6e3"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_32/model.sdf",
+      "size": 575,
+      "sha256": "9b35f6804b8b6a7698e572267b13198ff1fe350edf85ddaa9430e4dfad616e79"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_41/materials/scripts/aruco_41.material",
+      "size": 201,
+      "sha256": "117deadc04bb824e6abe8317d640a0bd4f8bbbc153edd877964de59af07fb978"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_41/materials/textures/aruco_41.png",
+      "size": 4880,
+      "sha256": "44482ebca5c653f6f9e6317dcb19d51e95935de5c21cd95dedd35a7705c60136"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_41/model.config",
+      "size": 285,
+      "sha256": "88e78dd38aed2130a249596228a0a225b3a7da5545cac7631f6d16bc9a710437"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_41/model.sdf",
+      "size": 575,
+      "sha256": "e11f11bc6de679f15e7b989d25644329f43f2692d79b80c86677450b7cf0a8ad"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_42/materials/scripts/aruco_42.material",
+      "size": 201,
+      "sha256": "acc5a0972001d8aaff3bc9cbcb43153ecb4895ca2f15f2e683e51caeed0ddd19"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_42/materials/textures/aruco_42.png",
+      "size": 4657,
+      "sha256": "fd2de79599a869a85c73a34c73eab2b09ab09a9f04402012a24225524d066ad3"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_42/model.config",
+      "size": 285,
+      "sha256": "197386ebd3decce99326b4a52bf7dd0a4844cd9c158d25dda3d78f874b9a7460"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/models/aruco_marker_42/model.sdf",
+      "size": 575,
+      "sha256": "d6cadd690aeda03f6ef2f54d9a3e02db273500241ea8a09a60fa2db2973caa01"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/package.xml",
+      "size": 900,
+      "sha256": "98ed1c727cfb0f01cf3cd8aaf6d14e71d7abe21e5dc4e4d7d99b03d92956d3d7"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/scripts/local_search_manager_node.py",
+      "size": 14118,
+      "sha256": "01abe70da038c48e17f692e2a85d2d6115f3eac6deeb2ae2b802d6c55218a06a"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/scripts/navigation_manager_node.py",
+      "size": 6467,
+      "sha256": "765d07fb2f3fdf4337de039a1b68279a379012d7803f49a4179ac37846746e3c"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/scripts/semantic_planner_node.py",
+      "size": 4718,
+      "sha256": "1e627e724e5135463c29183d5e59b1f47a7857437dd5e356f9ae236c3c12d5e1"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/scripts/vision_detector_node.py",
+      "size": 11103,
+      "sha256": "7155e801148be3745b899dc1e1d1769d5dfe572d931543d8950bd947be45dff8"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_command_parser.py",
+      "size": 2221,
+      "sha256": "827ba2514388f6e07dddda7979fa76f446e566562465a92f64e9b4abd6dd9344"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_launch_files.py",
+      "size": 2528,
+      "sha256": "876fff84c9a50c8d8f87d35886b8d38eca7e8dc51b07f711fe8da9d839d7f120"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_local_search_manager.py",
+      "size": 7345,
+      "sha256": "880e7c748ec43648a7c94aa761e3cff968619e2d6ee02a0813c4d3bd969b8de9"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_navigation_manager.py",
+      "size": 3174,
+      "sha256": "0bd95a5a42fd983b1860e54d0d380e0f74e3e73d98b7540dea5f2d1230d71bdd"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_semantic_map.py",
+      "size": 2077,
+      "sha256": "57f33ee877062de16bdec98dfd8e5d6844caf35ddd3929565ab3c7b0f0110a1f"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/test/test_vision_detector.py",
+      "size": 3532,
+      "sha256": "845f78fce72371a2a76bbf467a1a2fb0871acdd03162cc9448f4e0ec5e576fd3"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/tools/generate_sim_assets.ps1",
+      "size": 11448,
+      "sha256": "cfa60629407f55dae54992b44ca1acc8f79146299adc5223f3f2720761a0488f"
+    },
+    {
+      "path": "MÒBIL/SIMULACIO_GAZEBO/event_guide_robot/worlds/event_fair.world",
+      "size": 11605,
+      "sha256": "c374f192730116476a4caf2b07aaaf0577e1d5a74f6f6e95bb56da72e6b00fc8"
+    },
+    {
+      "path": "Presentació.pdf",
+      "size": 30168806,
+      "sha256": "db8c9ed49c8c2a9a44f84c2c4b49067d3c328551c6666742c67476d14c390463"
+    }
+  ],
+  "exclusions": [
+    ".DS_Store",
+    "MANIPULADORS/.DS_Store",
+    "MANIPULADORS/RA_PF1/.DS_Store",
+    "MANIPULADORS/RA_PF1/.git/COMMIT_EDITMSG",
+    "MANIPULADORS/RA_PF1/.git/FETCH_HEAD",
+    "MANIPULADORS/RA_PF1/.git/HEAD",
+    "MANIPULADORS/RA_PF1/.git/ORIG_HEAD",
+    "MANIPULADORS/RA_PF1/.git/config",
+    "MANIPULADORS/RA_PF1/.git/description",
+    "MANIPULADORS/RA_PF1/.git/hooks/applypatch-msg.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/commit-msg.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/fsmonitor-watchman.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/post-update.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-applypatch.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-commit.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-merge-commit.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-push.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-rebase.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/pre-receive.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/prepare-commit-msg.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/push-to-checkout.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/sendemail-validate.sample",
+    "MANIPULADORS/RA_PF1/.git/hooks/update.sample",
+    "MANIPULADORS/RA_PF1/.git/index",
+    "MANIPULADORS/RA_PF1/.git/info/exclude",
+    "MANIPULADORS/RA_PF1/.git/logs/HEAD",
+    "MANIPULADORS/RA_PF1/.git/logs/refs/heads/andreu_gay",
+    "MANIPULADORS/RA_PF1/.git/logs/refs/heads/master",
+    "MANIPULADORS/RA_PF1/.git/logs/refs/remotes/origin/HEAD",
+    "MANIPULADORS/RA_PF1/.git/logs/refs/remotes/origin/master",
+    "MANIPULADORS/RA_PF1/.git/logs/refs/stash",
+    "MANIPULADORS/RA_PF1/.git/objects/02/98d63fa9f05a9e0c473e7b8ae5db785a1d970f",
+    "MANIPULADORS/RA_PF1/.git/objects/0f/e3a97e86ac4a5047d8de3db00d1585aed91cee",
+    "MANIPULADORS/RA_PF1/.git/objects/16/1fe7b8e4e967608fb4b2079ca9221b4b312e43",
+    "MANIPULADORS/RA_PF1/.git/objects/16/732797ba09be1a90ade946790762270a9f0d7a",
+    "MANIPULADORS/RA_PF1/.git/objects/1b/b59acdaf6c10ef2e8477a8455af8435d0d001c",
+    "MANIPULADORS/RA_PF1/.git/objects/20/375e5850f61b7730b5b58a511aa2fa76bc10af",
+    "MANIPULADORS/RA_PF1/.git/objects/21/fc1857f169ed6f48171c15aff5b5d52ad0d32d",
+    "MANIPULADORS/RA_PF1/.git/objects/21/fd68e6b77a5de2ccf1be4731cf8319dc4a8c61",
+    "MANIPULADORS/RA_PF1/.git/objects/24/119ba8e5034f9ad4fb94a6e12799d0cea54269",
+    "MANIPULADORS/RA_PF1/.git/objects/24/a38a91e9f7e3a8270fbf0dea242c0e88d56414",
+    "MANIPULADORS/RA_PF1/.git/objects/2e/87a8f8a824f46d740427b1812dab704748861a",
+    "MANIPULADORS/RA_PF1/.git/objects/38/71925ea6ee1ebf180b049fa62a49e90c8ce1f7",
+    "MANIPULADORS/RA_PF1/.git/objects/3d/4d449ae3abe2d6b3f0d7e824879b35aaf63225",
+    "MANIPULADORS/RA_PF1/.git/objects/43/36c5a77839dc16dcaa9e12ea9325112bf6b974",
+    "MANIPULADORS/RA_PF1/.git/objects/45/61ecb5f92cd319f6cea3583aa150be7af20b26",
+    "MANIPULADORS/RA_PF1/.git/objects/4b/9bfb6289fceb36c1fb31b914754adb08824ae8",
+    "MANIPULADORS/RA_PF1/.git/objects/4c/d0344484752ed37420aa5d23f40e6df71d1ccf",
+    "MANIPULADORS/RA_PF1/.git/objects/4d/8b6f5dea34eaf49cd830b460e39b1101d8ee2d",
+    "MANIPULADORS/RA_PF1/.git/objects/52/4285bf01b75da7cd4aba0b24607eb605fe75de",
+    "MANIPULADORS/RA_PF1/.git/objects/58/4af28d425a2157cdeb2f2a3292713558a1b715",
+    "MANIPULADORS/RA_PF1/.git/objects/59/e8ce56ab4e0ae3144d99c36293adeab2c326d3",
+    "MANIPULADORS/RA_PF1/.git/objects/5f/b13f49a3e922d1b62dd3290eec004e657dc22d",
+    "MANIPULADORS/RA_PF1/.git/objects/61/3dbe8c5227a29ab94f49a0fc207e16ff5e6778",
+    "MANIPULADORS/RA_PF1/.git/objects/62/c39d893fdbe798bbb6f3f62bdcf8bcd2157f03",
+    "MANIPULADORS/RA_PF1/.git/objects/6a/f38df0d5d6a544bf9e2df397769697d9f34994",
+    "MANIPULADORS/RA_PF1/.git/objects/72/48184f644bcde28789e9a3e8490250e10e46be",
+    "MANIPULADORS/RA_PF1/.git/objects/7d/0576ccd48d5a365b2e7c224dcf8eaa0d606eee",
+    "MANIPULADORS/RA_PF1/.git/objects/82/6213ab18e05ac5eaa61e46af9a8f441adf1b38",
+    "MANIPULADORS/RA_PF1/.git/objects/8c/1aa73c6fa159453d2e64f8edbad217117476fb",
+    "MANIPULADORS/RA_PF1/.git/objects/8f/f814a441ee5913646d43bb76627f78957cf289",
+    "MANIPULADORS/RA_PF1/.git/objects/90/3a7332b097f0421d7803dc05ba510cd9fb8d1c",
+    "MANIPULADORS/RA_PF1/.git/objects/91/a560e2c84a8332f4f543ea02bd5f677e3f29b8",
+    "MANIPULADORS/RA_PF1/.git/objects/93/48319444403a31f50bdff23c8821b7ec1d9969",
+    "MANIPULADORS/RA_PF1/.git/objects/94/ce6cae691fa7f6ae25c361505aa8f2d383a5cb",
+    "MANIPULADORS/RA_PF1/.git/objects/98/597f7c037522c8b22f8a78ffec66e5105832f8",
+    "MANIPULADORS/RA_PF1/.git/objects/a1/77a3f18e3666e78550e039cf9650fe3050cc71",
+    "MANIPULADORS/RA_PF1/.git/objects/a7/67e4d916fbc0d68616fe796e11c7b1b19dc3de",
+    "MANIPULADORS/RA_PF1/.git/objects/a8/2f47b4b5e10ca9366334499644cd3ae360f3dc",
+    "MANIPULADORS/RA_PF1/.git/objects/a9/3cec4f11f132e96fb30bed1d1c73ad436d5fcf",
+    "MANIPULADORS/RA_PF1/.git/objects/b2/d8702cea4558524df1e10ab192a31d77db9955",
+    "MANIPULADORS/RA_PF1/.git/objects/b4/3293b8e61e2161b837b2692f5f8942da6f202f",
+    "MANIPULADORS/RA_PF1/.git/objects/b4/46df9655e4d68b656f7fad2a07d61a48d41c97",
+    "MANIPULADORS/RA_PF1/.git/objects/b8/077fcca2bf6e64943bfb859a758e85c0d9a6f3",
+    "MANIPULADORS/RA_PF1/.git/objects/ba/69865e1b65741a0e7ef08556512a1b8636a898",
+    "MANIPULADORS/RA_PF1/.git/objects/c1/cf5f549f57d249bbf1b49df8f3f077728cc15b",
+    "MANIPULADORS/RA_PF1/.git/objects/c4/9f0b2c18eb17bfd579dc4f14d0b5fdca75dc1f",
+    "MANIPULADORS/RA_PF1/.git/objects/c6/43eef6c4760faa26af4a5f831babdffadbfb8f",
+    "MANIPULADORS/RA_PF1/.git/objects/da/432937cc80255e4ad24a924bd0ef2821eb0c48",
+    "MANIPULADORS/RA_PF1/.git/objects/db/6d3462cda394e85948cda8b74bf4a16024a11e",
+    "MANIPULADORS/RA_PF1/.git/objects/e5/5826b387e7a64b9cc0b59de554fafa742cfd8d",
+    "MANIPULADORS/RA_PF1/.git/objects/e6/ba90fb661902ea1341b725a7f4db5c4e408f2c",
+    "MANIPULADORS/RA_PF1/.git/objects/e9/a89830058ab3e36edf3480034cfbeb6c4a8c20",
+    "MANIPULADORS/RA_PF1/.git/objects/ee/871d79f5096d332aa7213edf2ebbd6cea905db",
+    "MANIPULADORS/RA_PF1/.git/objects/f2/819391b125439fc9bfd80a81c6c640349e72d1",
+    "MANIPULADORS/RA_PF1/.git/objects/f7/6262e2b3b2bf1221661d11b265c86a541975c0",
+    "MANIPULADORS/RA_PF1/.git/objects/f9/2b6f497bd3f993a4c1042837c2a40a6af49eef",
+    "MANIPULADORS/RA_PF1/.git/objects/pack/pack-7eedea912c0e0164a8b81b4eb6bc7425b59739b2.idx",
+    "MANIPULADORS/RA_PF1/.git/objects/pack/pack-7eedea912c0e0164a8b81b4eb6bc7425b59739b2.pack",
+    "MANIPULADORS/RA_PF1/.git/objects/pack/pack-7eedea912c0e0164a8b81b4eb6bc7425b59739b2.rev",
+    "MANIPULADORS/RA_PF1/.git/packed-refs",
+    "MANIPULADORS/RA_PF1/.git/refs/heads/andreu_gay",
+    "MANIPULADORS/RA_PF1/.git/refs/heads/master",
+    "MANIPULADORS/RA_PF1/.git/refs/remotes/origin/HEAD",
+    "MANIPULADORS/RA_PF1/.git/refs/remotes/origin/master",
+    "MANIPULADORS/RA_PF1/.git/refs/stash",
+    "MANIPULADORS/RA_PF1/pipeline/__pycache__/battery_check.cpython-312.pyc",
+    "MANIPULADORS/RA_PF1/pipeline/__pycache__/update_problem_goal.cpython-312.pyc",
+    "MANIPULADORS/VIDEOS_DEMO/.DS_Store",
+    "MÒBIL/.DS_Store",
+    "MÒBIL/ENTORN_REAL/.DS_Store",
+    "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/.DS_Store",
+    "MÒBIL/ENTORN_REAL/VIDEOS_DEMO/MAPA_REAL/.DS_Store",
+    "MÒBIL/ENTORN_REAL/event_guide_robot/.DS_Store",
+    "MÒBIL/SIMULACIO_GAZEBO/.DS_Store"
+  ],
+  "exclusion_reason": "Nested Git metadata, macOS .DS_Store and generated Python caches only; source files and original media preserved byte for byte."
+}

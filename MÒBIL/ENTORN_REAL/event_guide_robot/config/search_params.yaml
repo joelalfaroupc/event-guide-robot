@@ -1,0 +1,16 @@
+rotation_speed_rad_s: 0.25
+scan_rotation_duration_sec: 8.0
+search_timeout_sec: 120.0
+detection_stale_sec: 15.0
+control_rate_hz: 10.0
+
+# After the correct ArUco marker is detected, the robot centers it in the
+# rpicamera image and drives forward until the estimated marker distance is
+# about 20 cm. Keep speeds low because this is a narrow-space final approach.
+approach_enabled: true
+approach_target_distance_m: 0.35
+approach_forward_speed_m_s: 0.06
+approach_turn_gain: 0.4
+approach_max_turn_speed_rad_s: 0.25
+approach_center_deadband: 0.25
+approach_timeout_sec: 120.0

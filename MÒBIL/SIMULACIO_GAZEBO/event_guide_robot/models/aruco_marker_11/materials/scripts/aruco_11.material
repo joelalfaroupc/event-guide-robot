@@ -1,0 +1,16 @@
+material Aruco/Marker11
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      texture_unit
+      {
+        texture aruco_11.png
+        filtering none
+      }
+    }
+  }
+}
